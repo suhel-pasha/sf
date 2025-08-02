@@ -1,0 +1,27 @@
+<aura:component access="GLOBAL"  controller="MyPrograms" implements="force:appHostable,flexipage:availableForAllPageTypes"> 
+    
+    <aura:attribute name="newProgram" type="Program__c" />
+        <aura:attribute name="message" type="String" default=""/>
+
+    <lightning:card iconName="standard:contact" title="Add a Contact">
+        <div class="slds-p-around_medium">
+            <lightning:layout>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <lightning:inputName aura:id="program"
+                                         label="Program Decs"
+                                         description="{!v.newProgram.description__C}"
+                                         required="true"/>
+                </lightning:layoutItem> 
+                <lightning:layoutItem size="8" padding="around-small">
+                    <lightning:input aura:id="program" label="Date" type="date" value="{!v.newProgram.Date__c}"/>
+                  <lightning:input aura:id="program" label="Name" type="text" value="{!v.newProgram.Name__c}"/>
+
+                    <lightning:textarea aura:id="program" label="Program" value="{!v.newProgram.Program__c}"/>
+                    <lightning:button label="Save" onclick="{!c.handleSave}" variant="brand" class="slds-m-top_medium"/>
+                </lightning:layoutItem>
+            </lightning:layout>
+                        <p>{!v.message}</p>
+
+        </div>
+    </lightning:card>
+</aura:component>

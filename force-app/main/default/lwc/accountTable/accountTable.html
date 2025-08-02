@@ -3,7 +3,8 @@
 	<lightning-datatable 
 	key-field="Id"
 	data={accounts.data}
-	columns={columns}>
+	columns={columns}
+	onrowaction={handleRowAction}>
 	</lightning-datatable>
 	</template>
 	<template lwc:if={noRecords}>No Records Found</template>

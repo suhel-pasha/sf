@@ -92,7 +92,3 @@ Salesforce uses **OAuth 2.0** for authentication and authorization in:
 
 > *"OAuth 1.0 used cryptographic signatures for request authentication, which was secure but complicated. OAuth 2.0 simplified this by using bearer tokens over HTTPS, allowing more flexibility, better mobile and web app support, and multiple grant types.
 > In Salesforce, OAuth 2.0 is the standard for authenticating external apps and APIs. For example, when creating a Connected App, we configure OAuth scopes and a callback URL, then use an OAuth flow like Authorization Code to get an access token. This token lets the app access Salesforce data without exposing user credentials."*
-
----
-
-If you want, I can also make you a **diagram of OAuth 2.0 flow in Salesforce** so you can **memorize it visually** for interviews. Would you like me to?

@@ -75,3 +75,68 @@ If asked **"When to choose which?"**, say:
 * Mention **governor limits, maintainability, and complexity** as your decision factors.
 
 </details>
+
+<details>
+<summary>Flows</summary>
+
+## **1️⃣ What Are Flows?**
+
+**Definition:**
+Flows are **powerful automation tools** in Salesforce that let you **collect, process, and manipulate data** using a point-and-click interface, without writing Apex code.
+
+They are part of the **Salesforce Flow** suite (which also includes Process Builder, but PB is being retired).
+Flows are more flexible and capable than Workflow Rules or Process Builder — they’re essentially the **"Swiss Army knife"** of declarative automation.
+
+---
+
+## **2️⃣ Types of Flows (Important in Interviews)**
+
+1. **Record-Triggered Flow** – Runs automatically when a record is created, updated, or deleted. *(Most common)*
+2. **Scheduled-Triggered Flow** – Runs at a specific time or interval.
+3. **Screen Flow** – Interactive flows with screens for user input (used in Lightning Pages, Quick Actions).
+4. **Autolaunched Flow** – Runs without user interaction; can be called from Apex, Process Builder, other flows, or REST API.
+
+---
+
+## **3️⃣ When Are They Used?**
+
+Flows can be used for a wide range of automation, such as:
+
+* Auto-updating related records when a record changes
+* Sending emails or notifications based on criteria
+* Creating records based on business events
+* Collecting input from users via custom screens
+* Performing **complex, multi-object logic** without code
+* Running scheduled jobs like nightly data cleanups
+
+**Example:**
+When an Opportunity is marked “Closed Won” →
+
+* Update the related Account’s “Customer Status” to “Active”
+* Create a Welcome Task for the Account Manager
+* Send a custom email to the customer
+
+---
+
+## **4️⃣ Can We Call APIs from Flows?**
+
+**Directly?**
+
+* As of recent Salesforce releases, **yes** — you can use the **"HTTP Callout"** action in Flows (introduced in Winter '23).
+* This lets you make REST API calls to external systems **without Apex**.
+* You first **register an External Service** or create an **HTTP Callout definition** in Setup.
+
+**Before Winter '23:**
+
+* We could not make HTTP callouts directly from Flow — we had to **call an Apex method from Flow** that handled the API request.
+
+---
+
+## **5️⃣ Interview-Ready Answer**
+
+> **"Flows are Salesforce's most powerful declarative automation tool, allowing us to build business processes without writing code. They can run automatically when records change, be scheduled, or be launched by users via screens. I use Flows for tasks like updating related records, sending notifications, and guiding users through data entry.
+> Since Winter '23, Flows can call external REST APIs directly using the HTTP Callout feature. Before that, we had to call an Apex method from Flow to make API requests. My approach is to use Flows whenever possible for maintainability and only switch to Apex when the logic is too complex or performance-critical."**
+
+---
+
+</details>
